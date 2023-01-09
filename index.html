@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<title>Testing ground</title>
+<style>
+head, title {display: block; font-size: 35px}
+iframe {display: block; margin: 20px 0}
+</style>
+<nav>
+	<a href="#Alpha">Alpha</a>
+	<a href="#Beta">Beta</a>
+	<a href="#Gamma">Gamma</a>
+	<a href="#Delta">Delta</a>
+	<a href="#Epsylon">Epsylon</a>
+</nav>
+<main id="main"></main>
+<script>
+	// Use /my-description/My-page-title
+	// The description is used to target it with a pattern
+	// The title appears on the page
+	document.title = location.pathname.split('/').pop().replaceAll('-', ' ');
+
+	for (const iframe of new URLSearchParams(location.search).getAll('iframe')) {
+		const element = document.createElement('iframe');
+		element.src = iframe
+		main.append(element);
+	}
+</script>
