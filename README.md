@@ -2,8 +2,6 @@
 
 > ephimeral iframe page builder
 
-**Sponsored by [PixieBrix](https://www.pixiebrix.com)** :tada:
-
 Build your own pages via URL, use one of these domains:
 
 - https://ephiframe.vercel.app
