@@ -2,8 +2,7 @@
 <meta charset="UTF-8" />
 <title>Testing ground</title>
 <style>
-head, title {display: block; font-size: 35px}
-iframe {display: block; margin: 20px 0}
+iframe {display: block; margin: 20px 0; width: 30%}
 </style>
 <nav>
 	<a href="#Alpha">Alpha</a>
@@ -12,12 +11,10 @@ iframe {display: block; margin: 20px 0}
 	<a href="#Delta">Delta</a>
 	<a href="https://github.com/fregante/ephiframe">Docs for ephiframe</a>
 </nav>
-<main id="main"></main>
+<main id="main"><h1></h1></main>
 <script>
-	// Use /my-description/My-page-title
-	// The description is used to target it with a pattern
-	// The title appears on the page
 	document.title = location.pathname.split('/').pop().replaceAll('-', ' ');
+	document.querySelector('h1').textContent = document.title;
 
 	for (const iframe of new URLSearchParams(location.search).getAll('iframe')) {
 		const element = document.createElement('iframe');
