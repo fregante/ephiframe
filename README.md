@@ -11,9 +11,10 @@ Build your own pages via URL, use one of these domains:
 - https://alt-ephiframe.vercel.app
 - https://more-ephiframe.vercel.app
 - https://extra-ephiframe.vercel.app
-- https://additional-ephiframe.vercel.app
-- https://secondary-ephiframe.vercel.app
-- https://supplementary-ephiframe.vercel.app
+- https://static-ephiframe.vercel.app
+- https://dynamic-ephiframe.vercel.app
+- https://accepted-ephiframe.vercel.app
+- https://excluded-ephiframe.vercel.app
 
 Then add titles and descriptions via pathname, like:
 
