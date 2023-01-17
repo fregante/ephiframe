@@ -3,7 +3,7 @@
 <title>Testing ground</title>
 <style>
 html {
-	font: 20px/1.5 system, sans-serif;
+	font: 15px/1.5 system, sans-serif;
 }
 main {
 	display: flex;
@@ -18,6 +18,10 @@ iframe {
 	border-radius: 10px;
 	opacity: 90%;
 	flex-grow: 1;
+	max-width: 600px;
+}
+h1, p {
+	margin: 0 0 10px;
 }
 </style>
 <h1>ephiframe</h1>
@@ -32,6 +36,9 @@ iframe {
 <script>
 	document.title = location.pathname.split('/').pop().replaceAll('-', ' ');
 	document.querySelector('h1').textContent = document.title;
+	
+	const originHash = location.origin.split('').reduce((a,b) => a + b.charCodeAt(0), 0);
+	document.body.style.background = `hsl(${originHash}deg 100% 90%)`;
 
 	for (const iframe of new URLSearchParams(location.search).getAll('iframe')) {
 		const element = document.createElement('iframe');
