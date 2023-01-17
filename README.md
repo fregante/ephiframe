@@ -25,3 +25,4 @@ Then add any number of `iframe` search aparameters to create multiple frames on 
 - [?iframe=./Custom-title&iframe=./Other-iframe](https://extra-ephiframe.vercel.app/Outer?iframe=./Custom-title&iframe=./Other-iframe)
 - [?iframe=https://extra-ephiframe.vercel.app/Cross-domain-iframe](https://alt-ephiframe.vercel.app/Outer?iframe=https://extra-ephiframe.vercel.app/Cross-domain-iframe)
 - [?iframe=https://extra-ephiframe.vercel.app/Cross-domain-iframe%3Fiframe%3D./nested](https://ephiframe.vercel.app/Outer?iframe=https://extra-ephiframe.vercel.app/Cross-domain-iframe%3Fiframe%3D./nested)
+- [?iframe=https://extra-ephiframe.vercel.app/Brix%3Fiframe%3Dhttps%3A%2F%2Fephiframe.vercel.app%2FPixie](https://ephiframe.vercel.app/Pixie?iframe=https://extra-ephiframe.vercel.app/Brix%3Fiframe%3Dhttps%3A%2F%2Fephiframe.vercel.app%2FPixie)
