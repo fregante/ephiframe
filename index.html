@@ -48,7 +48,7 @@ h1, p {
 
 	for (const srcdoc of new URLSearchParams(location.search).getAll('srcdoc')) {
 		const element = document.createElement('iframe');
-		element.srcdoc = iframe
+		element.srcdoc = srcdoc
 		main.append(element);
 	}
 </script>
