@@ -45,4 +45,10 @@ h1, p {
 		element.src = iframe
 		main.append(element);
 	}
+
+	for (const srcdoc of new URLSearchParams(location.search).getAll('srcdoc')) {
+		const element = document.createElement('iframe');
+		element.srcdoc = iframe
+		main.append(element);
+	}
 </script>
