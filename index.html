@@ -39,15 +39,24 @@ h1, p {
 	
 	const originHash = location.origin.split('').reduce((a,b) => a + b.charCodeAt(0), 0);
 	document.body.style.background = `hsl(${originHash}deg 100% 90%)`;
-
+	const sandboxFlags = new URLSearchParams(location.search).getAll('sandbox');
+	
 	for (const iframe of new URLSearchParams(location.search).getAll('iframe')) {
 		const element = document.createElement('iframe');
+		const sandbox = sandboxFlags.shift();
+		if (sandbox) {
+			element.sandbox = sandbox;
+		}
 		element.src = iframe
 		main.append(element);
 	}
 
 	for (const srcdoc of new URLSearchParams(location.search).getAll('srcdoc')) {
 		const element = document.createElement('iframe');
+		const sandbox = sandboxFlags.shift();
+		if (sandbox) {
+			element.sandbox = sandbox;
+		}
 		element.srcdoc = srcdoc
 		main.append(element);
 	}
