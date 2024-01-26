@@ -44,7 +44,7 @@ h1, p {
 	for (const iframe of new URLSearchParams(location.search).getAll('iframe')) {
 		const element = document.createElement('iframe');
 		const sandbox = sandboxFlags.shift();
-		if (sandbox) {
+		if (sandbox !== undefined) {
 			element.sandbox = sandbox;
 		}
 		element.src = iframe
@@ -54,7 +54,7 @@ h1, p {
 	for (const srcdoc of new URLSearchParams(location.search).getAll('srcdoc')) {
 		const element = document.createElement('iframe');
 		const sandbox = sandboxFlags.shift();
-		if (sandbox) {
+		if (sandbox !== undefined) {
 			element.sandbox = sandbox;
 		}
 		element.srcdoc = srcdoc
